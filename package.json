@@ -1,0 +1,31 @@
+{
+  "name": "console-ag",
+  "version": "0.1.0",
+  "description": "My console.",
+  "main": "./lib/index.js",
+  "bin": {
+    "console-ag": "./bin/index.js"
+  },
+  "scripts": {
+    "start": "node ./lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresg9108/console-ag.git"
+  },
+  "keywords": [],
+  "author": "Andrés González",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andresg9108/console-ag/issues"
+  },
+  "homepage": "https://github.com/andresg9108/console-ag#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "figlet": "^1.5.2",
+    "inquirer": "^8.2.0",
+    "open": "^8.4.0",
+    "processpy": "^1.0.0",
+    "shelljs": "^0.8.4"
+  }
+}
