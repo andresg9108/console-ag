@@ -23,6 +23,7 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "figlet": "^1.5.2",
+    "handlebars": "^4.7.7",
     "inquirer": "^8.2.0",
     "open": "^8.4.0",
     "processpy": "^1.0.0",
