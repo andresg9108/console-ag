@@ -1,10 +1,12 @@
-var oInquirer = require('inquirer');
-var oUseful = require('./useful.js');
-var oCalendar = require('./calendar/index.js');
-var oWhatsapp = require('./whatsapp/index.js');
+var oApp = {};
 
-var start = async () => {
-  oInquirer.prompt([
+oApp.inquirer = require('inquirer');
+oApp.useful = require('../lib/useful.js');
+oApp.calendar = require('./calendar/index.js');
+oApp.whatsapp = require('./whatsapp/index.js');
+
+oApp.start = () => {
+  oApp.inquirer.prompt([
     {
       type: 'list',
       name: 'option',
@@ -24,13 +26,13 @@ var start = async () => {
   .then(oAnswers => {
     switch (oAnswers.option) {
       case '1':
-        oCalendar.start();
+        oApp.calendar.start();
         break;
       case '2':
-        oWhatsapp.start();
+        oApp.whatsapp.start();
         break;
       case 'exit':
-        oUseful.bye();
+        oApp.useful.bye();
         break;
       default:
         start();
@@ -39,7 +41,7 @@ var start = async () => {
   });
 }
 
-exports.start = start;
+exports.start = oApp.start;
 
 
 
