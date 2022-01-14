@@ -1,10 +1,12 @@
-var oInquirer = require('inquirer');
-var oUseful = require('../useful.js');
-var oMain = require('../index.js');
-var oNow = require('./now.js');
+var oApp = {};
 
-var start = () => {
-	oInquirer.prompt([
+oApp.oInquirer = require('inquirer');
+oApp.useful = require('../../lib/useful.js');
+oApp.main = require('../index.js');
+oApp.now = require('./now.js');
+
+oApp.start = () => {
+	oApp.oInquirer.prompt([
 	{
 		type: 'list',
 		name: 'option',
@@ -24,13 +26,13 @@ var start = () => {
 	.then(oAnswers => {
 		switch (oAnswers.option) {
 			case '1':
-				oNow.start();
+				oApp.now.start();
 				break;
 			case 'back':
-				oMain.start();
+				oApp.main.start();
 				break;
 			case 'exit':
-        		oUseful.bye();
+        		oApp.useful.bye();
         		break;
 			default:
 				start();
@@ -39,4 +41,4 @@ var start = () => {
 	});
 }
 
-exports.start = start;
+exports.start = oApp.start;
