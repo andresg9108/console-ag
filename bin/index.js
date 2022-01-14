@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-var oSplashscreen = require('../lib/splashscreen.js');
-var oMain = require('../lib/index.js');
+var oSplashscreen = require('../modules/splashscreen.js');
+var oMain = require('../modules/index.js');
 
 try{
 	oSplashscreen.start();
