@@ -31,7 +31,7 @@ try{
 	// Task management.
 	oApp.commander.command('task <action>')
 	.alias('t')
-	.description(`task management.
+	.description(`task management (depends on mongodb).
 		action type:
 		create|c: create a task.
 		update|u: update a task.
