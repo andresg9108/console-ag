@@ -20,7 +20,6 @@ try{
 		throw(1);
 	});
 
-
 	// Run console app.
 	oApp.commander.command('app')
 	.description('run console app.')
@@ -28,9 +27,21 @@ try{
 		oApp.consoleApp.start()
 	});
 
+	// Processpy commands.
+	oApp.commander.command('ppy <action>')
+	.description(`processpy commands.
+		action type:
+		html|h: the process html.`)
+	.action((action) => {
+		if(action == 'html' || action == 'h'){
+			console.log('Proceso HTML.');
+		}else{
+			throw(1);
+		}
+	});
+
 	// Task management.
 	oApp.commander.command('task <action>')
-	.alias('t')
 	.description(`task management (depends on mongodb).
 		action type:
 		create|c: create a task.
