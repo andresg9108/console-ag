@@ -7,6 +7,7 @@ oApp.consoleApp = require('../console-app/index.js');
 oApp.dotenv = require('dotenv').config();
 oApp.db = require('../lib/db.js');
 oApp.task = require('../controller/task.js');
+oApp.ppy = require('../controller/ppy.js');
 
 oApp.packageJson = JSON.parse(oApp.fs.readFileSync(`./package.json`, 'utf-8'));
 
@@ -30,11 +31,12 @@ try{
 	// Processpy commands.
 	oApp.commander.command('ppy <action>')
 	.description(`processpy commands.
+		Processpy documentation: https://github.com/andresg9108/processpy/blob/master/README.md
 		action type:
-		html|h: the process html.`)
+		html|h: the process html. (Command #1)`)
 	.action((action) => {
 		if(action == 'html' || action == 'h'){
-			console.log('Proceso HTML.');
+			oApp.ppy.html();
 		}else{
 			throw(1);
 		}
