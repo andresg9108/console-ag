@@ -33,10 +33,20 @@ try{
 	.description(`processpy commands.
 		Processpy documentation: https://github.com/andresg9108/processpy/blob/master/README.md
 		action type:
-		html|h: the process html. (Command #1)`)
+		html|h: the process html. (Command #1)
+		sql|s: the process sql. (Command #2)
+		rts|r: replace text string. (Command #3)
+		cal|c: calendar. (Command #4)
+		`)
 	.action((action) => {
 		if(action == 'html' || action == 'h'){
 			oApp.ppy.html();
+		}else if(action == 'sql' || action == 's'){
+			oApp.ppy.sql();
+		}else if(action == 'rts' || action == 'r'){
+			oApp.ppy.rts();
+		}else if(action == 'cal' || action == 'c'){
+			oApp.ppy.cal();
 		}else{
 			throw(1);
 		}

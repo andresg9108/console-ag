@@ -29,4 +29,8 @@ This project aims to create several commands that allow us to automate repetitiv
 
 ## Getting started <span name="GettingStarted"></span> ##
 
-***DOCUMENTATION IN REVIEW***
+To start using this project in our console we will only have to execute the following command that will show the help.
+
+~~~
+console-ag --help
+~~~
