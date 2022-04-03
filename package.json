@@ -1,13 +1,13 @@
 {
   "name": "console-ag",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Console of Andrés González",
   "main": "./bin/index.js",
   "bin": {
     "console-ag": "./bin/index.js"
   },
   "scripts": {
-    "preinstall": "npm i processpy -g --unsafe-perm"
+    "preinstall": "npm i processpy -g"
   },
   "repository": {
     "type": "git",

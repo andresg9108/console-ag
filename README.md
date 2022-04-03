@@ -25,6 +25,7 @@ This project aims to create several commands that allow us to automate repetitiv
   - Run "python --version" in your OS console to see if it is already installed.
 * ManyP CLI.
   - Run "npm i console-ag -g".
+  - On Linux based OSs, include "--unsafe-perm", then the command would be "npm i console-ag -g --unsafe-perm".
   - Run "console-ag --version" in your OS console to see if it is already installed.
 
 ## Getting started <span name="GettingStarted"></span> ##
