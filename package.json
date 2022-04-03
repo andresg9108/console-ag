@@ -1,6 +1,6 @@
 {
   "name": "console-ag",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Console of Andrés González",
   "main": "./bin/index.js",
   "bin": {

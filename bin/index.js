@@ -6,10 +6,13 @@ oApp.commander = require('commander');
 oApp.consoleApp = require('../console-app/index.js');
 oApp.dotenv = require('dotenv').config();
 oApp.db = require('../lib/db.js');
+oApp.useful = require('../lib/useful.js');
 oApp.task = require('../controller/task.js');
 oApp.ppy = require('../controller/ppy.js');
 
-oApp.packageJson = JSON.parse(oApp.fs.readFileSync(`./package.json`, 'utf-8'));
+let sPath = oApp.useful.getPath();
+sPath = `${sPath}/console-ag/package.json`;
+oApp.packageJson = JSON.parse(oApp.fs.readFileSync(sPath, 'utf-8'));
 
 try{
 	oApp.commander.version(oApp.packageJson.version)
