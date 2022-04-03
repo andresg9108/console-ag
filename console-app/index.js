@@ -2,7 +2,6 @@ var oApp = {};
 
 oApp.inquirer = require('inquirer');
 oApp.useful = require('../lib/useful.js');
-oApp.calendar = require('./calendar/index.js');
 oApp.whatsapp = require('./whatsapp/index.js');
 
 oApp.start = () => {
@@ -12,11 +11,8 @@ oApp.start = () => {
       name: 'option',
       message: 'Choose an option\n',
       choices: [{
-        name: 'Calendar',
-        value: '1'
-      },{
         name: 'Whatsapp',
-        value: '2'
+        value: '1'
       },{
         name: 'Exit',
         value: 'exit'
@@ -26,9 +22,6 @@ oApp.start = () => {
   .then(oAnswers => {
     switch (oAnswers.option) {
       case '1':
-        oApp.calendar.start();
-        break;
-      case '2':
         oApp.whatsapp.start();
         break;
       case 'exit':

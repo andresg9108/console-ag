@@ -1,13 +1,13 @@
 {
   "name": "console-ag",
-  "version": "1.1.0",
-  "description": "My console.",
+  "version": "2.0.0",
+  "description": "Console of Andrés González",
   "main": "./bin/index.js",
   "bin": {
     "console-ag": "./bin/index.js"
   },
   "scripts": {
-    "start": "node ./bin/index.js"
+    "preinstall": "npm i processpy -g --unsafe-perm"
   },
   "repository": {
     "type": "git",
@@ -21,12 +21,13 @@
   },
   "homepage": "https://github.com/andresg9108/console-ag#readme",
   "dependencies": {
-    "chalk": "^4.1.2",
-    "figlet": "^1.5.2",
+    "commander": "^9.0.0",
+    "dotenv": "^16.0.0",
     "handlebars": "^4.7.7",
     "inquirer": "^8.2.0",
+    "mongoose": "^6.2.4",
     "open": "^8.4.0",
     "processpy": "^1.0.0",
-    "shelljs": "^0.8.4"
+    "shelljs": "^0.8.5"
   }
 }
